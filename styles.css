@@ -1,30 +1,72 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: borsder-box;
 }
 
 body  {
   height: 100vh;
-  background: #ffffff;
+  width: 100vw;
+  background: #ffffff; */
 }
 
 .memory-game {
   width: 640px;
   height: 640px;
-  display: flex;
-  border: 2px solid green;
+  margin: 20%;
+  display: grid;
+  /* flex-wrap: wrap;  */
+  /* /^allowing items to wrap in multiple rows */
+  perspective: 1000px;
+  
 }
 
 .memory-card{
-  border: 2px solid pink;
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  /* /^ Margin, which lets you create space around elements is set her for space around each  card,
+  We added calc to height and weight because this margin exceeds the size of the memory game box. So,
+  we minus width and height from each card to make it fit again using calc. */
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.memory-card:active {
+  transform: scale(.97);
+  transition: transform 0.3s;
+}
+/* /^ This is a psuedoclass, which is a keyword addded t a selector that 
+specifies a special state, ex hover. The transform property applies 2D or 
+3D transformation to an element. This allows us to rotate, scale, move. 
+Scale defines a transformation on either the X,Y, or Z axis. In 
+order to transform this pseudoclass we needed to have a transform on the class itself,
+which is memory-card.*/
+
+.memory-card.flip{
+  transform: rotateY(180deg);
+
 }
 
 .front-face,
-.back-face {
-  border: 2px solid yellow;
+.back-face { 
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: lightblue;
+  /* border: 2px solid yellow; */
+  backface-visibility: hidden;
 }
 
+.front-face{
+  transform: rotateY(180deg);
+}
+/* /^ cards are positioned relative to the memory card which is within the memory-game 
+Where he display:flex and wrap take place */
 
 /* img {
   width: 100px;
