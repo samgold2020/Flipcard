@@ -1,34 +1,75 @@
-* {
-  /* padding: 0;
-  margin: 0; */
-  /* box-sizing: border-box; */
+body  {
+  background: #ffffff; 
 }
 
-body  {
-  /* height: 100vh;
-  width: 100vw; */
-  background: #ffffff; 
+h1 {
+  text-align: center;
+  font-weight: 2;
+}
+
+p {
+  text-align: center;
+  color: black;
+ }
+
+p2 {
+  text-align: center;
+  color: white;
+ }
+
+.button {
+  background-color: darkred;
+  padding: 1em 1em;
+  color: white;
+  border: 0;
+}
+
+.button:hover {
+  background: darkgrey;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0; 
+  top: 0;
+  height: 50%;
+  width: 50%; 
+  overflow: auto;
+  background-color: black;
+}
+
+.closeBtn {
+  color: lightgrey;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: grey;
+  margin: 20% auto;
+  padding: 20px;
+  width: 70%;
 }
 
 .memory-game {
   display: grid;
-  grid-template-columns: [left] 10vw [row] 1fr [row] 1fr [row] 1fr [right] 10vw;
-  grid-template-rows: 35fr 2fr  35fr ;
-  grid-template-areas: 
-  /* width: 640px;
-  height: 640px; */
-  /* margin: 20%; */
-  perspective: 1000px;
-  
-}
+  grid-template-columns: [row] 1fr [row] 1fr [row] 1fr;
+  padding: 50px;
+  grid-template-rows: 300px 300px 300px;
+  perspective: 1000px; 
 
-.memory-game::before { content: ""; grid-column: 1 ; grid-row: 1/6 ; background-color: #fff; }
-.memory-game::after { content: ""; grid-column: 0  ; grid-row: 5; background-color: #fff; }
+}
 
 
 .memory-card{
-  /* width: calc(25% - 10px);
-  height: calc(33.333% - 10px); */
   margin: 8px;
   /* /^ Margin, which lets you create space around elements is set her for space around each  card,
   We added calc to height and weight because this margin exceeds the size of the memory game box. So,
@@ -62,8 +103,8 @@ which is memory-card.*/
   /* padding: 2px; */
   position: absolute;
   /* border-radius: 5px; */
-  background: lightblue;
-  border: 2px solid black;
+  /* background: lightblue; */
+  /* border: 2px solid black; */
   backface-visibility: hidden;
 }
 
@@ -72,4 +113,3 @@ which is memory-card.*/
 }
 /* /^ cards are positioned relative to the memory card which is within the memory-game 
 Where he display:flex and wrap take place */
-
