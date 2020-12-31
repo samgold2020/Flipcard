@@ -1,34 +1,39 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: borsder-box;
+  /* padding: 0;
+  margin: 0; */
+  /* box-sizing: border-box; */
 }
 
 body  {
-  height: 100vh;
-  width: 100vw;
-  background: #ffffff; */
+  /* height: 100vh;
+  width: 100vw; */
+  background: #ffffff; 
 }
 
 .memory-game {
-  width: 640px;
-  height: 640px;
-  margin: 20%;
   display: grid;
-  /* flex-wrap: wrap;  */
-  /* /^allowing items to wrap in multiple rows */
+  grid-template-columns: [left] 10vw [row] 1fr [row] 1fr [row] 1fr [right] 10vw;
+  grid-template-rows: 35fr 2fr  35fr ;
+  grid-template-areas: 
+  /* width: 640px;
+  height: 640px; */
+  /* margin: 20%; */
   perspective: 1000px;
   
 }
 
+.memory-game::before { content: ""; grid-column: 1 ; grid-row: 1/6 ; background-color: #fff; }
+.memory-game::after { content: ""; grid-column: 0  ; grid-row: 5; background-color: #fff; }
+
+
 .memory-card{
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 5px;
+  /* width: calc(25% - 10px);
+  height: calc(33.333% - 10px); */
+  margin: 8px;
   /* /^ Margin, which lets you create space around elements is set her for space around each  card,
   We added calc to height and weight because this margin exceeds the size of the memory game box. So,
   we minus width and height from each card to make it fit again using calc. */
-  position: relative;
+  /* position: relative; */
   transform: scale(1);
   transform-style: preserve-3d;
   transition: 0.5s;
@@ -54,11 +59,11 @@ which is memory-card.*/
 .back-face { 
   width: 100%;
   height: 100%;
-  padding: 20px;
+  /* padding: 2px; */
   position: absolute;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   background: lightblue;
-  /* border: 2px solid yellow; */
+  border: 2px solid black;
   backface-visibility: hidden;
 }
 
@@ -68,6 +73,3 @@ which is memory-card.*/
 /* /^ cards are positioned relative to the memory card which is within the memory-game 
 Where he display:flex and wrap take place */
 
-/* img {
-  width: 100px;
-} */
