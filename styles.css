@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body  {
+  height: 100vh;
+  background: #ffffff;
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  display: flex;
+  border: 2px solid green;
+}
+
+.memory-card{
+  border: 2px solid pink;
+}
+
+.front-face,
+.back-face {
+  border: 2px solid yellow;
+}
+
+
+/* img {
+  width: 100px;
+} */
