@@ -35,7 +35,6 @@ function flipCard(){
   //this is console logging the memory-card 
   // console.log(this)
 
-
 //if hasFlippedCard is false 
 if (!hasFlippedCard){
   //First card flip action
@@ -44,11 +43,29 @@ if (!hasFlippedCard){
   //logs the first card flip and sets hasFlippedCard to true
   // console.logs({hasFlippedCard, firstCard});
 
- }else {
+ } else {
    hasFlippedCard = false;
    secondCard = this;
   //logs the second card flip and sets hasFlippedCard to true
   //  console.log({hasFlippedCard, secondCard});
+
+  //if the cards match
+  if (firstCard.dataset.card === secondCard.dataset.card){
+    //remove the event for both cards
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    //else allow more cards flipped
+  } else {
+    setTimeout(() => {
+      firstCard.classList.remove('flip');
+      secondCard.classList.remove('flip');
+    }, 1000);
+  }
+
+  //Javascript access to read the data value in HTML uses the dataset property.  Get the 
+  // property by the part after the attribute name after "data-", which here is card.
+  // console.log(firstCard.dataset.card)
+  // console.log(secondCard.dataset.card)
  }
 }
   
