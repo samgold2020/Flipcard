@@ -2,14 +2,35 @@ body  {
   background: #ffffff; 
 }
 
-h1 {
+
+.title {
+  perspective: 1000px; 
+}
+
+.title-inner {
+  width: 100%;
+  height: 100%;
   text-align: center;
-  font-size: 56px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.title:hover .title-inner {
+  transform: rotateY(360deg);
+}
+
+.title-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
 }
 
 .button-modal {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 .modal-button:hover, .close:hover {
