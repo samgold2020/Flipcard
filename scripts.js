@@ -1,25 +1,3 @@
-// //Modal Element
-// let modal = document.getElementById("directionsModal");
-// //Open Modal Button
-// let modalBtn = document.getElementById("modalBtn");
-// //Close Modal
-// let closeBtn = document.getElementsByClassName("closeBtn")[0];
-// // ^ since we are getting all closeBtn class names, even though there is only 
-// // one we need to specify which one we want in the array. 
-
-// //Listen for openModal click
-// modalBtn.addEventListener('click', openModal);
-// //Listen for closeModal click
-// closeBtn.addEventListener('click', closeModal);
-
-// function openModal (){
-//   modal.style.display =  'block';
-// }
-
-// function closeModal() {
-//   modal.style.display = 'none';
-// }
-
 //BOOTSTRAP modal:
 let modalButton = document.getElementsByClassName("modal-button")[0];
 let modal = document.getElementsByClassName("modal-fade")[0];
@@ -54,23 +32,23 @@ function flipCard(){
   this.classList.toggle('flip')
   //this is console logging the memory-card 
   // console.log(this)
-
-//if hasFlippedCard is false 
-if (!hasFlippedCard){
-  //First card flip action
-  hasFlippedCard = true;
-  firstCard = this;
-  //logs the first card flip and sets hasFlippedCard to true
-  // console.logs({hasFlippedCard, firstCard});
- } else {
-   hasFlippedCard = false;
-   secondCard = this;
-  //logs the second card flip and sets hasFlippedCard to true
-  //  console.log({hasFlippedCard, secondCard});
-
-  //if the cards match
-  checkForMatch();
-}
+  
+  //if hasFlippedCard is false 
+  if (!hasFlippedCard){
+    //First card flip action
+    hasFlippedCard = true;
+    firstCard = this;
+    //logs the first card flip and sets hasFlippedCard to true
+    // console.logs({hasFlippedCard, firstCard});
+  } else {
+    hasFlippedCard = false;
+    secondCard = this;
+    //logs the second card flip and sets hasFlippedCard to true
+    //  console.log({hasFlippedCard, secondCard});
+    
+    //if the cards match
+    checkForMatch();
+  }
 }
 
 function checkForMatch(){
@@ -82,15 +60,20 @@ function freezeCards(){
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
 }
-  
-function unflipCards() {
-   lockBoard = true;
 
+function unflipCards() {
+  lockBoard = true;
+  
   setTimeout(() => {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
     lockBoard = false;
   }, 1000);
+}
+
+function correctAnswer() {
+
+
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard))

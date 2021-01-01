@@ -9,16 +9,9 @@
   <title>Flipcards</title>
 </head>
 <body>
-  <h1>Flipcards</h1>
-  <!-- <div id="modalBtn" >
-  <button  class="button">Directions</button>
-  <div id="directionsModal" class="modal">
-    <div class="modalContent">
-      <span class="closeBtn">&times;</span>
-      <p2>This is a modal, This is moroe texxt a;lsjgaskljhgaskljhgaskljhg;akghjs</p2>
-    </div>
-  </div> 
-</div> -->
+  <div class="title">
+    <h1>Flipcards</h1>
+  </div>
 <!-- Button trigger modal -->
 <div class=button-modal>
   <button type="button" class="modal-button" >
@@ -31,10 +24,13 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Directions</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">How to Play:</h5>
       </div>
       <div class="modal-body">
-        How to play the game right here y'all, text text text text text text text text text text text text
+        Click on a card and search for it's pair in both number and suit. If you have chosen incorrectly the cards will flip over before your next attempt. Each correct pairing is worth 2 points.
+        <br/> 
+        <br/> 
+        Good Luck!
       </div>
       <div class="modal-footer">
         <button type="button" class="close" data-dismiss="modal">Close</button>
@@ -120,6 +116,10 @@
     <img class="front-face" src="images/10_diamonds.svg" alt="10ofDiamonds" />
   </div> -->
 </section>
+<div class="score">
+  <div id="score-text">Your Score:</div>
+  <div id="score-counter">0</div>
+</div>
   <script src="scripts.js"></script>
 </body>
 </html>
