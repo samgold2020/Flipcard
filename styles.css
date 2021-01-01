@@ -14,7 +14,8 @@ p {
 
 p2 {
   text-align: center;
-  color: white;
+  color: #000;
+  background-color: #ffffff;
  }
 
 .button {
@@ -34,10 +35,15 @@ p2 {
   z-index: 1;
   left: 0; 
   top: 0;
-  height: 50%;
+  height: 60%;
   width: 50%; 
   overflow: auto;
-  background-color: black;
+  background-color: rgba(0,0,0, 0.5);
+  margin: 10% 25%;
+}
+
+.modal-content {
+  background-color: #f4f4f4;
 }
 
 .closeBtn {
@@ -65,7 +71,7 @@ p2 {
   padding: 50px;
   grid-template-rows: 300px 300px 300px;
   perspective: 1000px; 
-
+  /* the perspective property gives depth to the card flip. */
 }
 
 
@@ -91,6 +97,7 @@ Scale defines a transformation on either the X,Y, or Z axis. In
 order to transform this pseudoclass we needed to have a transform on the class itself,
 which is memory-card.*/
 
+/* Flip class from Javascript */
 .memory-card.flip{
   transform: rotateY(180deg);
 
