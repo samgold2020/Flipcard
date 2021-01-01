@@ -1,24 +1,44 @@
-//Modal Element
-let modal = document.getElementById("directionsModal");
-//Open Modal Button
-let modalBtn = document.getElementById("modalBtn");
-//Close Modal
-let closeBtn = document.getElementsByClassName("closeBtn")[0];
-// ^ since we are getting all closeBtn class names, even though there is only 
-// one we need to specify which one we want in the array. 
+// //Modal Element
+// let modal = document.getElementById("directionsModal");
+// //Open Modal Button
+// let modalBtn = document.getElementById("modalBtn");
+// //Close Modal
+// let closeBtn = document.getElementsByClassName("closeBtn")[0];
+// // ^ since we are getting all closeBtn class names, even though there is only 
+// // one we need to specify which one we want in the array. 
 
-//Listen for openModal click
-modalBtn.addEventListener('click', openModal);
-//Listen for closeModal click
-closeBtn.addEventListener('click', closeModal);
+// //Listen for openModal click
+// modalBtn.addEventListener('click', openModal);
+// //Listen for closeModal click
+// closeBtn.addEventListener('click', closeModal);
 
-function openModal (){
-  modal.style.display =  'block';
+// function openModal (){
+//   modal.style.display =  'block';
+// }
+
+// function closeModal() {
+//   modal.style.display = 'none';
+// }
+
+//BOOTSTRAP modal:
+let modalButton = document.getElementsByClassName("modal-button")[0];
+let modal = document.getElementsByClassName("modal-fade")[0];
+let closeOut = document.getElementsByClassName("close")[0];
+
+modalButton.addEventListener('click', openModal);
+closeOut.addEventListener('click', closeModal);
+
+function openModal () {
+  modal.style.display = 'block';
+  console.log('clicked')
 }
 
-function closeModal() {
+function closeModal () {
   modal.style.display = 'none';
+  console.log('clicked')
+
 }
+
 
 //Functionality for the game: 
 const cards = document.querySelectorAll('.memory-card');
