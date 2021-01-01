@@ -30,13 +30,10 @@ closeOut.addEventListener('click', closeModal);
 
 function openModal () {
   modal.style.display = 'block';
-  console.log('clicked')
 }
 
 function closeModal () {
   modal.style.display = 'none';
-  console.log('clicked')
-
 }
 
 

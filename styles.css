@@ -7,7 +7,22 @@ h1 {
   font-weight: 2;
 }
 
-p {
+.button-modal {
+  display: flex;
+  justify-content: center;
+
+}
+
+.modal-button:hover, .close:hover {
+  background-color: darkgrey;
+}
+
+.modal-fade {
+  display: none;
+  z-index: 1;
+}
+
+/* p {
   text-align: center;
   color: black;
  }
@@ -23,14 +38,14 @@ p2 {
   padding: 1em 1em;
   color: white;
   border: 0;
-}
+} 
 
-.button:hover {
+/* .button:hover {
   background: darkgrey;
-}
+} */
 
 .modal {
-  display: none;
+  /* display: none;
   position: fixed;
   z-index: 1;
   left: 0; 
@@ -39,10 +54,10 @@ p2 {
   width: 50%; 
   overflow: auto;
   background-color: rgba(0,0,0, 0.5);
-  margin: 10% 25%;
+  margin: 10% 25%; */
 }
 
-#modalBtn {
+/* #modalBtn {
   justify-content: center;
 }
 
@@ -67,7 +82,7 @@ p2 {
   margin: 20% auto;
   padding: 20px;
   width: 70%;
-}
+} */
 
 .memory-game {
   display: grid;
