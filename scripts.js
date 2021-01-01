@@ -24,6 +24,7 @@ function closeModal() {
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard;
 let secondCard;
 
@@ -31,6 +32,8 @@ let secondCard;
   //After, the  toggle is a boolean for if the classlist is there. We have a 
   //Flip class in CSS 
 function flipCard(){
+  //if lockboard is true dont' flip cards. unlock after the timer times out.
+  if (lockBoard) return;
   this.classList.toggle('flip')
   //this is console logging the memory-card 
   // console.log(this)
@@ -42,7 +45,6 @@ if (!hasFlippedCard){
   firstCard = this;
   //logs the first card flip and sets hasFlippedCard to true
   // console.logs({hasFlippedCard, firstCard});
-
  } else {
    hasFlippedCard = false;
    secondCard = this;
@@ -50,23 +52,28 @@ if (!hasFlippedCard){
   //  console.log({hasFlippedCard, secondCard});
 
   //if the cards match
-  if (firstCard.dataset.card === secondCard.dataset.card){
-    //remove the event for both cards
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-    //else allow more cards flipped
-  } else {
-    setTimeout(() => {
-      firstCard.classList.remove('flip');
-      secondCard.classList.remove('flip');
-    }, 1000);
-  }
+  checkForMatch();
+}
+}
 
-  //Javascript access to read the data value in HTML uses the dataset property.  Get the 
-  // property by the part after the attribute name after "data-", which here is card.
-  // console.log(firstCard.dataset.card)
-  // console.log(secondCard.dataset.card)
- }
+function checkForMatch(){
+  //ternary for if match vs. if not match
+  let isMatch = firstCard.dataset.card === secondCard.dataset.card; isMatch ? freezeCards() : unflipCards ();
+}
+
+function freezeCards(){
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
 }
   
+function unflipCards() {
+   lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+    lockBoard = false;
+  }, 1000);
+}
+
 cards.forEach(card => card.addEventListener('click', flipCard))

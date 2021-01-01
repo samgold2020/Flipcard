@@ -42,6 +42,10 @@ p2 {
   margin: 10% 25%;
 }
 
+#modalBtn {
+  justify-content: center;
+}
+
 .modal-content {
   background-color: #f4f4f4;
 }
@@ -67,13 +71,13 @@ p2 {
 
 .memory-game {
   display: grid;
-  grid-template-columns: [row] 1fr [row] 1fr [row] 1fr;
-  padding: 50px;
-  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: 300px;
+  padding: 100px;
   perspective: 1000px; 
   /* the perspective property gives depth to the card flip. */
 }
-
 
 .memory-card{
   margin: 8px;
@@ -110,8 +114,8 @@ which is memory-card.*/
   /* padding: 2px; */
   position: absolute;
   /* border-radius: 5px; */
-  /* background: lightblue; */
-  /* border: 2px solid black; */
+  /* background: lightblue; 
+  border: 2px solid black;  */
   backface-visibility: hidden;
 }
 
