@@ -14,6 +14,15 @@ function closeModal () {
   modal.style.display = 'none';
 }
 
+//Function for darkmode toggle
+let darkMode = document.getElementsByClassName("dark")[0];
+darkMode.addEventListener('click', activateDark);
+
+function activateDark(){
+  let body = document.body;
+  body.classList.toggle("dark-mode");
+  darkMode.innerHTML === "Dark Mode" ? darkMode.innerHTML = "Light Mode" : darkMode.innerHTML = "Dark Mode";
+}
 
 //Functionality for the game: 
 const cards = document.querySelectorAll('.memory-card');
@@ -71,7 +80,7 @@ function unflipCards() {
   }, 1000);
 }
 
-function correctAnswer() {
+function increaseScore() {
 
 
 }

@@ -1,7 +1,12 @@
 body  {
-  background: #ffffff; 
+  background-color: white;
+  color: black; 
 }
 
+.dark-mode{
+  background-color: black;
+  color: white;
+}
 
 .title {
   perspective: 1000px; 
@@ -16,7 +21,7 @@ body  {
 }
 
 .title:hover .title-inner {
-  transform: rotateY(360deg);
+  transform: rotateY(180deg);
 }
 
 .title-front {
@@ -33,7 +38,7 @@ body  {
   padding: 20px;
 }
 
-.modal-button:hover, .close:hover {
+.modal-button:hover, .close:hover, {
   background-color: darkgrey;
 }
 
@@ -53,6 +58,17 @@ body  {
   z-index: 1;
 }
 
+.modal-body{
+  text-align: center;
+  color: black;
+}
+
+.modal-header, .modal-title, .modal-footer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
 .memory-game {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
