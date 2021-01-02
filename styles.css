@@ -9,7 +9,7 @@ body  {
 }
 
 .title {
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 .title-inner {
@@ -34,13 +34,13 @@ body  {
 
 .button-modal {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 20px;
 }
 
-.modal-button:hover, .close:hover, {
+/* .modal-button:hover, .close:hover, {
   background-color: darkgrey;
-}
+} */
 
 .modal-fade {
   display: none;
@@ -71,7 +71,7 @@ body  {
 }
 .memory-game {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 1em;
   grid-auto-rows: 300px;
   padding: 50px;

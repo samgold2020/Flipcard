@@ -24,7 +24,7 @@ function activateDark(){
   darkMode.innerHTML === "Dark Mode" ? darkMode.innerHTML = "Light Mode" : darkMode.innerHTML = "Dark Mode";
 }
 
-//Functionality for the game: 
+//Functionality for the game 
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
