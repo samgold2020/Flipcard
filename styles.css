@@ -34,9 +34,10 @@ body  {
 }
 
 .button-modal {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 8rem);
+  justify-content: center;
+  grid-gap: 10px;
 }
 
 /* .modal-button:hover, .close:hover, {
