@@ -15,13 +15,18 @@
     <div class="title-back"><h1>Flipcards</h1></div>
     </div>
   </div>
-<!-- Button trigger modal -->
-<div class=button-modal>
-  <button type="button" class="modal-button" >
-    Directions
-  </button>
-  <button class="dark">Dark Mode</button>
-  <button class="restart">Restart</button>
+  <!-- Button trigger modal -->
+  <div class=button-modal>
+    <button type="button" class="modal-button" >
+      Directions
+    </button>
+    <!-- Dark mode toggle -->
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+    <!-- <button class="dark">Dark Mode</button> -->
+    <button class="restart" onClick="window.location.reload()">Restart</button>
 </div>
 
 <!-- Modal -->
@@ -100,7 +105,7 @@
     <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
     <img class="front-face" src="images/7_diamonds.svg" alt="7ofDiamonds" />
   </div>
-  <div class=memory-card data-card="eightDiamond">
+  <!-- <div class=memory-card data-card="eightDiamond">
     <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
     <img class="front-face" src="images/8_diamonds.svg" alt="8ofDiamonds" />
   </div>
@@ -123,11 +128,17 @@
   <div class=memory-card data-card="tenDiamond">
     <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
     <img class="front-face" src="images/10_diamonds.svg" alt="10ofDiamonds" />
-  </div>
+  </div> -->
 </section>
 <div class="score">
   <div>Score: </div>
   <div id="score-text"></div>
+</div>
+<div id="winner" class="winner-modal">
+  <div class="winner-modal-content">
+    <span class="close-winner">&times;</span>
+    <p>Congratulations, you have won!</p>
+  </div>
 </div>
   <script src="scripts.js"></script>
 </body>

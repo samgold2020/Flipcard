@@ -9,25 +9,25 @@ closeOut.addEventListener('click', closeModal);
 function openModal () {
   modal.style.display = 'block';
 }
-console.log(window.innerWidth)
+// console.log(window.innerWidth)
 
 function closeModal () {
   modal.style.display = 'none';
 }
 
 //Function for darkmode toggle
-let darkMode = document.getElementsByClassName("dark")[0];
+let darkMode = document.getElementsByClassName("slider round")[0];
 darkMode.addEventListener('click', activateDark);
+// console.log(darkMode)
 
 function activateDark(){
   let body = document.body;
   body.classList.toggle("dark-mode");
-  darkMode.innerHTML === "Dark Mode" ? darkMode.innerHTML = "Light Mode" : darkMode.innerHTML = "Dark Mode";
+  // darkMode.innerHTML === "Dark Mode" ? darkMode.innerHTML = "Light Mode" : darkMode.innerHTML = "Dark Mode";
 }
 
 //Functionality for the game 
 const cards = document.querySelectorAll('.memory-card');
-
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard;
@@ -61,27 +61,32 @@ function flipCard(){
   }
 }
 
-
-
 function checkForMatch(){
   //ternary for if match vs. if not match
   let isMatch = firstCard.dataset.card === secondCard.dataset.card; isMatch ? freezeCards() : unflipCards ();  
   keepScore()
 }
 
+let gameOver = document.getElementsByClassName("winner-modal")[0];
+console.log(gameOver)
 let gameScore = 0
 function keepScore(){
   let score = document.getElementById("score-text")
     if (firstCard.dataset.card === secondCard.dataset.card) {
       score.innerHTML = gameScore += 2
       if (gameScore === 18) {
-        console.log('Start over?')
+        gameOver.style.display = "block"
       }
     }
 }
 
-function restart(){
-  
+//Close Winner Modal DOM
+let span = document.getElementsByClassName("close-winner")[0];
+span.addEventListener('click', closeWinnerModal);
+
+//Function for closing the winner modal
+function closeWinnerModal(){
+  gameOver.style.display="none"
 }
 
 function freezeCards(){
@@ -99,6 +104,7 @@ function unflipCards() {
   }, 1000);
 }
 
+//Reset
 
 //Push all the cards into an array
 // function increaseScore() {
