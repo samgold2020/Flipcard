@@ -9,6 +9,7 @@ closeOut.addEventListener('click', closeModal);
 function openModal () {
   modal.style.display = 'block';
 }
+console.log(window.innerWidth)
 
 function closeModal () {
   modal.style.display = 'none';
@@ -60,9 +61,20 @@ function flipCard(){
   }
 }
 
+
+
 function checkForMatch(){
   //ternary for if match vs. if not match
-  let isMatch = firstCard.dataset.card === secondCard.dataset.card; isMatch ? freezeCards() : unflipCards ();
+  let isMatch = firstCard.dataset.card === secondCard.dataset.card; isMatch ? freezeCards() : unflipCards ();  
+  keepScore()
+}
+
+let gameScore = 0
+function keepScore(){
+  let score = document.getElementById("score-text")
+    if (firstCard.dataset.card === secondCard.dataset.card) {
+      score.innerHTML = gameScore += 2
+    }
 }
 
 function freezeCards(){
@@ -80,9 +92,10 @@ function unflipCards() {
   }, 1000);
 }
 
-function increaseScore() {
 
+//Push all the cards into an array
+// function increaseScore() {
 
-}
+// }
 
 cards.forEach(card => card.addEventListener('click', flipCard))
