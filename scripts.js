@@ -68,13 +68,13 @@ function checkForMatch(){
 }
 
 let gameOver = document.getElementsByClassName("winner-modal")[0];
-console.log(gameOver)
+// console.log(gameOver)
 let gameScore = 0
 function keepScore(){
   let score = document.getElementById("score-text")
     if (firstCard.dataset.card === secondCard.dataset.card) {
       score.innerHTML = gameScore += 2
-      if (gameScore === 18) {
+      if (gameScore === 12) {
         gameOver.style.display = "block"
       }
     }
@@ -104,11 +104,30 @@ function unflipCards() {
   }, 1000);
 }
 
-//Reset
+//have the order tied to something you can shuffle
+let arr = [1, 2, 3, 4, 5, 6,  7, 8, 9, 10, 11, 12]
+window.addEventListener("load", shuffle);
+buttonShuffle = document.getElementsByClassName("restart")
 
-//Push all the cards into an array
-// function increaseScore() {
+//return cards and append to child
 
-// }
+
+
+let shuffle = (arr) => {
+  let current = arr.length;
+  let temp;
+  let random;
+
+  while (0 !== current) {s
+      random = Math.floor(Math.random() * current);
+      current -= 1;
+      temp = arr[current];
+      arr[current] = arr[random];
+      arr[random] = temp;
+  }
+
+  return arr;
+  console.log(arr)
+};
 
 cards.forEach(card => card.addEventListener('click', flipCard))
