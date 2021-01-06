@@ -104,30 +104,64 @@ function unflipCards() {
   }, 1000);
 }
 
+
+
+
+
+
+// let test = document.getElementsByClassName("memory-game")[0].appendChild(newDiv)
+// test.appendChild(newDiv)
+
+// console.log(test)
+
+let cardsArrayBack = ["card", "card", "card","card", "card", "card", "card", "card", "card","card" ];
+let gameContainer = document.getElementsByClassName("memory-game")[0]
+for (let i=0; i < cardsArrayBack.length; i++){
+  let div = document.createElement("div");
+  let img = document.createElement("img");
+  div.appendChild(img)
+  gameContainer.appendChild(div).innerHTML = '<img width="130" height="200" src="./images/red_card_front.svg">';
+}
+
+let id = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+let cardsArrayFront = ["card01", "card02", "card03","card04", "card05", "card06","card07", "card08", "card09","card10" ];
+for (let i=0; i < cardsArrayBack.length; i++){
+  let div = document.createElement("div");
+  let img = document.createElement("img");
+  div.appendChild(img)
+  gameContainer.appendChild(div).innerHTML = '<img width="130" height="200" src="./images/red_card_front.svg">';
+}
+
+
+
 //have the order tied to something you can shuffle
-let arr = [1, 2, 3, 4, 5, 6,  7, 8, 9, 10, 11, 12]
-window.addEventListener("load", shuffle);
-buttonShuffle = document.getElementsByClassName("restart")
+// let arr = [1, 2, 3, 4, 5, 6,  7, 8, 9, 10, 11, 12]
+// window.addEventListener("load", shuffle);
+// buttonShuffle = document.getElementsByClassName("restart")
 
 //return cards and append to child
+// get Memoryy game and set it equal to container
+//a for loop will go over the array of values, use container.appendChild for each div
+// the number in the SVG link is the only dynamic element  
+//render with javascript
 
 
 
-let shuffle = (arr) => {
-  let current = arr.length;
-  let temp;
-  let random;
+// let shuffle = (arr) => {
+//   let current = arr.length;
+//   let temp;
+//   let random;
 
-  while (0 !== current) {s
-      random = Math.floor(Math.random() * current);
-      current -= 1;
-      temp = arr[current];
-      arr[current] = arr[random];
-      arr[random] = temp;
-  }
+//   while (0 !== current) {s
+//       random = Math.floor(Math.random() * current);
+//       current -= 1;
+//       temp = arr[current];
+//       arr[current] = arr[random];
+//       arr[random] = temp;
+//   }
 
-  return arr;
-  console.log(arr)
-};
+//   return arr;
+//   console.log(arr)
+// };
 
 cards.forEach(card => card.addEventListener('click', flipCard))
