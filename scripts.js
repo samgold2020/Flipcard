@@ -114,23 +114,38 @@ function unflipCards() {
 
 // console.log(test)
 
-let cardsArrayBack = ["card", "card", "card","card", "card", "card", "card", "card", "card","card" ];
+// let cardsArrayBack = ["card", "card", "card","card", "card", "card", "card", "card", "card", "card" ];
 let gameContainer = document.getElementsByClassName("memory-game")[0]
-for (let i=0; i < cardsArrayBack.length; i++){
-  let div = document.createElement("div");
-  let img = document.createElement("img");
-  div.appendChild(img)
-  gameContainer.appendChild(div).innerHTML = '<img width="130" height="200" src="./images/red_card_front.svg">';
+let gameCards = document.getElementsByClassName("memory-card")
+console.log(gameCards)
+let emptyArr = []
+for (let i=0; i < gameCards.length; i++){
+  emptyArr.push(gameCards[i])
+  console.log(emptyArr)
 }
 
-let id = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
-let cardsArrayFront = ["card01", "card02", "card03","card04", "card05", "card06","card07", "card08", "card09","card10" ];
-for (let i=0; i < cardsArrayBack.length; i++){
-  let div = document.createElement("div");
-  let img = document.createElement("img");
-  div.appendChild(img)
-  gameContainer.appendChild(div).innerHTML = '<img width="130" height="200" src="./images/red_card_front.svg">';
-}
+// for (let i=0; i < cardsArrayBack.length; i++){}
+
+//   let div = document.createElement("div");
+//   let img = document.createElement("img");
+//   div.appendChild(img)
+//   gameContainer.appendChild(div).innerHTML = '<img width="130" height="200" src="./images/red_card_front.svg">';
+// }
+
+// let images = ['./images/2_diamonds.svg', './images/2_diamonds.svg', 
+// './images/3_diamonds.svg', './images/3_diamonds.svg', 
+// './images/4_diamonds.svg', './images/4_diamonds.svg', 
+// './images/5_diamonds.svg', './images/5_diamonds.svg', 
+// './images/6_diamonds.svg','./images/6_diamonds.svg', ]
+// let id = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+// let cardsArrayFront = ["card01", "card02", "card03","card04", "card05", "card06","card07", "card08", "card09","card10" ];
+// for (let i=0; i < images.length; i++){
+//   console.log(images)
+//   let div = document.createElement("div");
+//   let img = document.createElement("img");
+//   div.appendChild(img)
+//   gameContainer.appendChild(div).innerHTML = '<img width="130" height="200" src="./images/red_card_front.svg">';
+// }
 
 
 
@@ -145,23 +160,5 @@ for (let i=0; i < cardsArrayBack.length; i++){
 // the number in the SVG link is the only dynamic element  
 //render with javascript
 
-
-
-// let shuffle = (arr) => {
-//   let current = arr.length;
-//   let temp;
-//   let random;
-
-//   while (0 !== current) {s
-//       random = Math.floor(Math.random() * current);
-//       current -= 1;
-//       temp = arr[current];
-//       arr[current] = arr[random];
-//       arr[random] = temp;
-//   }
-
-//   return arr;
-//   console.log(arr)
-// };
 
 cards.forEach(card => card.addEventListener('click', flipCard))
