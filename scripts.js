@@ -17,10 +17,14 @@ function closeModal () {
 let darkMode = document.getElementsByClassName("slider-round")[0];
 darkMode.addEventListener('click', activateDark);
 
+// let toggleText = document.getElementsByClassName('toggle')[0];
+// console.log(toggleText.innerHTML)
+
 function activateDark(){
   let body = document.body;
   body.classList.toggle("dark-mode");
-  // darkMode.innerHTML === "Dark Mode" ? darkMode.innerHTML = "Light Mode" : darkMode.innerHTML = "Dark Mode";
+
+  // toggleText.innerHTML = true ? toggleText.innerHTML = "Switch to Dark Mode:" : toggleText.innerHTML = "Dark Mode";
 }
 
 const navSlide = () => {
