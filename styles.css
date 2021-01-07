@@ -118,7 +118,7 @@ nav {
   position: fixed; 
   padding-top: 50px;
   left: 0; 
-  top: 5%;
+  top: 8%;
   width: 100%;
   height: 100%; 
   background-color: rgb(0, 0, 0);
@@ -136,10 +136,9 @@ nav {
   animation-name: animatetop;
   animation-duration: 0.4s;
   z-index: 1;
-
 }
 
-p{
+p {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -155,10 +154,13 @@ p{
 }
 
 .close-btn{
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  color: black;
+  border-radius: 4px;
+  width: 20%;
   text-align: center;
-  width: 10%;
+  background-color: grey;
+  padding: 10px 5px;
 }
 
 /* //////////////////////Game Grid////////////////////// */
@@ -203,11 +205,7 @@ which is memory-card.*/
 .back-face { 
   width: 100%;
   height: 100%;
-  /* padding: 2px; */
   position: absolute;
-  /* border-radius: 5px; */
-  /* background: lightblue; 
-  border: 2px solid black;  */
   backface-visibility: hidden;
 }
 
@@ -250,6 +248,12 @@ Where he display:flex and wrap take place */
   background-color: black;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.toggle {
+ display: grid;
+ justify-content: center;
+ padding: 10px;
 }
 
 .slider-round:before {
