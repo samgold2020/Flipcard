@@ -35,11 +35,19 @@ body  {
 
 .button-modal {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: repeat(3, 100px);
+  padding: 10px;
   justify-content: center;
+  align-items: center;
   grid-gap: 10px;
 }
 
+/* .switch, .shuffle .modal-button{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
+} */
 /* .modal-button:hover, .close:hover, {
   background-color: darkgrey;
 } */
@@ -74,6 +82,7 @@ body  {
 .memory-game {
   display: grid;
   grid-template-columns: repeat(6, 180px);
+  padding: 80px;
   justify-content: center;
   grid-auto-rows: 200px;
   perspective: 1000px; 
@@ -207,10 +216,12 @@ input:checked + .slider:before {
 /* Modal Content/Box */
 .winner-modal-content {
   background-color: white;
+  color: black;
   margin: 10% auto; /* 15% from the top and centered */
   /* padding: 20px; */
   /* border: 1px solid #888; */
-  width: 50%; /* Could be more or less, depending on screen size */
+  width: 100%; /* Could be more or less, depending on screen size */
+  /* height: 50%; */
 }
 
 p {

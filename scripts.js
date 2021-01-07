@@ -25,7 +25,7 @@ function activateDark(){
   body.classList.toggle("dark-mode");
   // darkMode.innerHTML === "Dark Mode" ? darkMode.innerHTML = "Light Mode" : darkMode.innerHTML = "Dark Mode";
 }
-
+///////////////////////////////////////////////////////////////////////////
 //Functionality for the game 
 const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
@@ -39,7 +39,9 @@ let secondCard;
 function flipCard(){
   //if lockboard is true dont' flip cards. unlock after the timer times out.
   if (lockBoard) return;
+  if (this === firstCard) return;
   this.classList.toggle('flip')
+  console.log(this.id)
   //this is console logging the memory-card 
   // console.log(this)
   
@@ -75,9 +77,9 @@ function keepScore(){
     if (firstCard.dataset.card === secondCard.dataset.card) {
       score.innerHTML = gameScore += 2
       if (gameScore === 12) {
-        gameOver.style.display = "block"
+        gameOver.style.display = "block";
       }
-    }
+    } 
 }
 
 //Close Winner Modal DOM
@@ -87,6 +89,7 @@ span.addEventListener('click', closeWinnerModal);
 //Function for closing the winner modal
 function closeWinnerModal(){
   gameOver.style.display="none"
+  location.reload()
 }
 
 function freezeCards(){
@@ -104,30 +107,26 @@ function unflipCards() {
   }, 1000);
 }
 
-//have the order tied to something you can shuffle
-let arr = [1, 2, 3, 4, 5, 6,  7, 8, 9, 10, 11, 12]
-window.addEventListener("load", shuffle);
-buttonShuffle = document.getElementsByClassName("restart")
 
-//return cards and append to child
+// function resetBoard(){
+//   [hasFlippedCard, lockBoard] = [false, false];
+// }
 
+let shuffleBtn = document.getElementsByClassName("shuffle")[0];
 
+function shuffle(){
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+    card.classList.remove('flip')
+  
+  })
+}
 
-let shuffle = (arr) => {
-  let current = arr.length;
-  let temp;
-  let random;
-
-  while (0 !== current) {s
-      random = Math.floor(Math.random() * current);
-      current -= 1;
-      temp = arr[current];
-      arr[current] = arr[random];
-      arr[random] = temp;
-  }
-
-  return arr;
-  console.log(arr)
-};
+window.onload = function(){
+  shuffle()
+}
+  
+  shuffleBtn.addEventListener('click', shuffle);
 
 cards.forEach(card => card.addEventListener('click', flipCard))
