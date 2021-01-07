@@ -1,19 +1,19 @@
-//BOOTSTRAP modal:
-let modalButton = document.getElementsByClassName("modal-button")[0];
-let modal = document.getElementsByClassName("modal-fade")[0];
-let closeOut = document.getElementsByClassName("close")[0];
+let modalBtn = document.getElementsByClassName("modal-btn")[0];
+let modal = document.querySelector(".modal")
+let closeBtn = document.querySelector(".close-btn")
 
-modalButton.addEventListener('click', openModal);
-closeOut.addEventListener('click', closeModal);
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
 
 function openModal () {
   modal.style.display = 'block';
 }
-// console.log(window.innerWidth)
 
 function closeModal () {
   modal.style.display = 'none';
 }
+
+
 
 //Function for darkmode toggle
 let darkMode = document.getElementsByClassName("slider round")[0];
@@ -25,6 +25,30 @@ function activateDark(){
   body.classList.toggle("dark-mode");
   // darkMode.innerHTML === "Dark Mode" ? darkMode.innerHTML = "Light Mode" : darkMode.innerHTML = "Dark Mode";
 }
+
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
+
+  //Toggle Nav:
+//When we click on the nav burger we want it to get the class of nav-active
+  burger.addEventListener('click', () => {
+//     The classList property returns the class name(s) of an element, as a DOMTokenList object.
+// This property is useful to add, remove and toggle CSS classes on an element.
+    nav.classList.toggle('nav-active');
+    console.log('clicked')
+  });
+
+}
+  navSlide();
+
+
+
+
+
+
+
 ///////////////////////////////////////////////////////////////////////////
 //Functionality for the game 
 const cards = document.querySelectorAll('.memory-card');
