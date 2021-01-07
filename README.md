@@ -1,8 +1,6 @@
 
-#Still need to do
-- Reset game option
-- score updates
-- media queries
-- levels
+# Still need to do
+- Multiple game levels
+- media queries for screen sizes
 
 Cards got at https://freesvg.org/
