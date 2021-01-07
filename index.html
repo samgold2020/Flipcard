@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
   <title>Flipcards</title>
 </head>
@@ -16,12 +14,8 @@
     </div>
       <ul class="nav-links">
         <li>
-          <button type="button" class="modal-btn"> Directions</button>
-
+          <div class="modal-btn" id="directions"> Directions</div>
           <div class="modal">
-            <!-- <div class="modal-header">
-              <span class="close-btn">&times;</span>
-            </div> -->
             <div class="modal-content">
               <p>Click on a card and search for it's pair in both number and suit. 
                 If you have chosen incorrectly the cards will flip over before your next attempt. 
@@ -32,16 +26,12 @@
                 <br/> 
                 Good Luck!</p>
                 <button class="close-btn">Close</button>
-
-            </div>
-            <div class="modal-footer">
-              <!-- <h2>I am the Footer</h2> -->
             </div>
           </div>
         </li>
-        <li><a href="https://samgold2020.github.io/Flipcards/">Restart</a></li>
-        <li><a href="https://www.linkedin.com/in/sgoldstein312/">Portfolio</a></li>
-        <li><a href="https://github.com/samgold2020">Github</a></li>
+        <!-- <li><a href="#" class="shuffle" id="restart">Restart</a></li> -->
+        <li><a href="https://www.linkedin.com/in/sgoldstein312/" id="portfolio">Portfolio</a></li>
+        <li><a href="https://github.com/samgold2020" id="github">Github</a></li>
       </ul>
     <!-- Mobile Burger Menu -->
     <div class="burger">
@@ -51,46 +41,11 @@
       </div>
   </nav>
   </div>
-  <!-- Button trigger modal -->
-  <div class=button-modal>
-    <!-- <button type="button" class="modal-button" >
-      Directions
-    </button> -->
-    <!-- Dark mode toggle -->
     <label class="switch">
       <input type="checkbox">
-      <span class="slider round"></span>
+      <span class="slider-round"></span>
     </label>
-    <!-- <button class="dark">Dark Mode</button> -->
-    <button class="shuffle">Restart</button>
 </div>
-
-<!-- Modal -->
-<!-- <div class="modal-fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">How to Play:</h5>
-      </div>
-      <div class="modal-body">
-        Click on a card and search for it's pair in both number and suit. 
-        If you have chosen incorrectly the cards will flip over before your next attempt. 
-        <br/>
-        <br/>
-        Each correct pairing is worth 2 points. 
-        <br/> 
-        <br/> 
-        Good Luck!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="close" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- <div id="score">
-  <p>Your Score:</p>
-</div> -->
 <section class="memory-game">
   <div class="memory-card" id="2" data-card="twoDiamond">
     <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />

@@ -13,12 +13,9 @@ function closeModal () {
   modal.style.display = 'none';
 }
 
-
-
 //Function for darkmode toggle
-let darkMode = document.getElementsByClassName("slider round")[0];
+let darkMode = document.getElementsByClassName("slider-round")[0];
 darkMode.addEventListener('click', activateDark);
-// console.log(darkMode)
 
 function activateDark(){
   let body = document.body;
@@ -37,7 +34,6 @@ const navSlide = () => {
 //     The classList property returns the class name(s) of an element, as a DOMTokenList object.
 // This property is useful to add, remove and toggle CSS classes on an element.
     nav.classList.toggle('nav-active');
-    console.log('clicked')
   });
 
 }
@@ -65,9 +61,8 @@ function flipCard(){
   if (lockBoard) return;
   if (this === firstCard) return;
   this.classList.toggle('flip')
-  console.log(this.id)
+  // console.log(this.id)
   //this is console logging the memory-card 
-  // console.log(this)
   
   //if hasFlippedCard is false 
   if (!hasFlippedCard){
@@ -75,12 +70,10 @@ function flipCard(){
     hasFlippedCard = true;
     firstCard = this;
     //logs the first card flip and sets hasFlippedCard to true
-    // console.logs({hasFlippedCard, firstCard});
   } else {
     hasFlippedCard = false;
     secondCard = this;
     //logs the second card flip and sets hasFlippedCard to true
-    //  console.log({hasFlippedCard, secondCard});
     
     //if the cards match
     checkForMatch();
@@ -94,7 +87,7 @@ function checkForMatch(){
 }
 
 let gameOver = document.getElementsByClassName("winner-modal")[0];
-// console.log(gameOver)
+
 let gameScore = 0
 function keepScore(){
   let score = document.getElementById("score-text")
@@ -151,6 +144,6 @@ window.onload = function(){
   shuffle()
 }
   
-  shuffleBtn.addEventListener('click', shuffle);
+  // shuffleBtn.addEventListener('click', shuffle);
 
 cards.forEach(card => card.addEventListener('click', flipCard))
