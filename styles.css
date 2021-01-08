@@ -59,30 +59,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .nav-links{
-    position: absolute;
-    right: 0px;
-    /* /Height is for the screen column */
-    height: 92vh;
-    /* top is still for the nav bar w/ title */
-    top:8vh;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    width: 50%;  
-    transform: translateX(100%);
-    z-index: 1;
 
-  }
-
-  .burger {
-    /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
-    display: block;
-    cursor: pointer;
-  }
-}
 
 .burger div{
   width: 25px;
@@ -368,6 +345,11 @@ input:checked + .slider-round:before {
 }
 
 @media screen and (max-width: 768px) {
+  .burger {
+    /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
+    display: block;
+    cursor: pointer;
+  }
   .memory-game {
   grid-template-columns: repeat(3, 180px);
   padding: 60;
@@ -383,12 +365,12 @@ input:checked + .slider-round:before {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 700px) {
   .memory-game {
     grid-template-columns: repeat(3, 120px);
     /* overflow: hidden; */
     }
-  .nav-links {
+  .nav.links {
     display: none;
   }
 }
