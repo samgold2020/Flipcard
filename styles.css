@@ -198,20 +198,6 @@ p {
   /* the perspective property gives depth to the card flip. */
 }
 
-@media screen and (max-width: 1024px) {
-  .memory-game {
-  grid-template-columns: repeat(4, 180px);
-  padding: 45px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .memory-game {
-  grid-template-columns: repeat(3, 180px);
-  padding: 60;
-  }
-}
-
 .memory-card{
   margin: 8px;
   /* /^ Margin, which lets you create space around elements is set her for space around each  card*/
@@ -370,5 +356,39 @@ input:checked + .slider-round:before {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .memory-game {
+  grid-template-columns: repeat(4, 180px);
+  padding: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .memory-game {
+  grid-template-columns: repeat(3, 180px);
+  padding: 60;
+  }
+  .title{
+    font-size: 36px;
+  }
+  .title-card {
+    display: none;
+  }
+  .play-btn{
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .memory-game {
+    grid-template-columns: repeat(3, 120px);
+    /* overflow: hidden; */
+    }
+  .nav-links {
+    display: none;
   }
 }
