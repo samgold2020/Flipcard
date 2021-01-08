@@ -162,6 +162,7 @@ p {
   text-align: center;
   background-color: grey;
   padding: 10px 10px;
+  cursor: pointer;
 }
 
 /* //////////////////////Game Grid////////////////////// */
