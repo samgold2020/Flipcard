@@ -8,8 +8,8 @@ The main driving force behind Flipcards was to build a game using HTML, CSS, and
 - Unit testing 
 - Game levels (one - three)
 ## Screenshots
-![alt text]('./images/Landing-page.jpg)
-![]('./images/Flipcards.gif)
+![alt text]('Landing-page.jpg)
+![]('Flipcards.gif)
 
 ## Images
 Card images were sourced at [freesvg.org](https://freesvg.org/)
