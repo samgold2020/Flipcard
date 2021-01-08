@@ -89,7 +89,7 @@ function keepScore(){
   let score = document.getElementById("score-text")
     if (firstCard.dataset.card === secondCard.dataset.card) {
       score.innerHTML = gameScore += 2
-      if (gameScore === 2) {
+      if (gameScore === 18) {
         gameOver.style.display = "block";
       }
     } 
