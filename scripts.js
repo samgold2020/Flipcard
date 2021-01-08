@@ -17,14 +17,13 @@ function closeModal () {
 let darkMode = document.getElementsByClassName("slider-round")[0];
 darkMode.addEventListener('click', activateDark);
 
-// let toggleText = document.getElementsByClassName('toggle')[0];
-// console.log(toggleText.innerHTML)
+
+let dynamicDirections = document.getElementsByClassName("dynamic-directions")[0];
+console.log(dynamicDirections.innerHTML)
 
 function activateDark(){
   let body = document.body;
-  body.classList.toggle("dark-mode");
-
-  // toggleText.innerHTML = true ? toggleText.innerHTML = "Switch to Dark Mode:" : toggleText.innerHTML = "Dark Mode";
+  body.classList.toggle("dark-mode")
 }
 
 const navSlide = () => {
@@ -42,12 +41,6 @@ const navSlide = () => {
 
 }
   navSlide();
-
-
-
-
-
-
 
 ///////////////////////////////////////////////////////////////////////////
 //Functionality for the game 
@@ -85,19 +78,18 @@ function flipCard(){
 }
 
 function checkForMatch(){
-  //ternary for if match vs. if not match
   let isMatch = firstCard.dataset.card === secondCard.dataset.card; isMatch ? freezeCards() : unflipCards ();  
   keepScore()
 }
 
 let gameOver = document.getElementsByClassName("winner-modal")[0];
-
 let gameScore = 0
+
 function keepScore(){
   let score = document.getElementById("score-text")
     if (firstCard.dataset.card === secondCard.dataset.card) {
       score.innerHTML = gameScore += 2
-      if (gameScore === 12) {
+      if (gameScore === 2) {
         gameOver.style.display = "block";
       }
     } 
@@ -128,11 +120,6 @@ function unflipCards() {
   }, 1000);
 }
 
-
-// function resetBoard(){
-//   [hasFlippedCard, lockBoard] = [false, false];
-// }
-
 let shuffleBtn = document.getElementsByClassName("shuffle")[0];
 
 function shuffle(){
@@ -148,6 +135,5 @@ window.onload = function(){
   shuffle()
 }
   
-  // shuffleBtn.addEventListener('click', shuffle);
 
 cards.forEach(card => card.addEventListener('click', flipCard))

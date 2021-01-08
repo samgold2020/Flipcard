@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
+  <title>Flipcards</title>
+</head>
+<body>
+    <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <h2>Flipcards</h2>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <div class="modal-btn" id="directions"> Directions</div>
+          <div class="modal">
+            <div class="modal-content">
+              <p>Click on a card and search for its pair in both number and suit. 
+                If you have chosen incorrectly the cards will flip over before your next attempt. 
+                <br/>
+                <br/>
+                Each correct pairing is worth 2 points. 
+                <br/> 
+                <br/> 
+                Good Luck!</p>
+                <div class="toggle">
+                  <div class="dynamic-directions">Switch to Dark Mode: </div>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider-round"></span>
+                  </label>
+                </div>
+                <br/>
+                <br/>
+                <div class="close-btn">Close</div>
+            </div>
+          </div>
+        </li>
+        <!-- <li><a href="#" class="shuffle" id="restart">Restart</a></li> -->
+        <li><a href="https://www.linkedin.com/in/sgoldstein312/" id="portfolio">Portfolio</a></li>
+        <li><a href="https://github.com/samgold2020" id="github">Github</a></li>
+      </ul>
+    <!-- Mobile Burger Menu -->
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+  </nav>
+  </div>
+  </div>
+</div>
+<div class="score">
+  <div>Score: </div>
+  <div id="score-text"></div>
+</div>
+<section class="memory-game">
+  <div class="memory-card" id="2" data-card="twoDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/2_diamonds.svg" alt="2ofDiamonds" />
+  </div>
+  <div class="memory-card" id="2.2" data-card="twoDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/2_diamonds.svg" alt="2ofDiamonds" />
+  </div>
+  <!-- <div class="memory-card" id="3" data-card="threeDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/3_diamonds.svg" alt="3ofDiamonds" />
+  </div>
+  <div class="memory-card" id="3.3" data-card="threeDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/3_diamonds.svg" alt="3ofDiamonds" />
+  </div>
+  <div class="memory-card" id="4" data-card="fourDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/4_diamonds.svg" alt="4ofDiamonds" />
+  </div>
+  <div class="memory-card" id="4.4" data-card="fourDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/4_diamonds.svg" alt="4ofDiamonds" />
+  </div>
+  <div class="memory-card" data-card="fiveDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/5_diamonds.svg" alt="5ofDiamonds" />
+  </div>
+  <div class="memory-card" data-card="fiveDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/5_diamonds.svg" alt="5ofDiamonds" />
+  </div>
+  <div class="memory-card" data-card="sixDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/6_diamonds.svg" alt="6ofDiamonds" />
+  </div>
+  <div class="memory-card" data-card="sixDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/6_diamonds.svg" alt="6ofDiamonds" />
+  </div>
+  <div class="memory-card" data-card="sevenDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/7_diamonds.svg" alt="7ofDiamonds" />
+  </div>
+  </div>
+  <div class="memory-card" data-card="sevenDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/7_diamonds.svg" alt="7ofDiamonds" />
+  </div> -->
+  <!-- <div class=memory-card data-card="eightDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/8_diamonds.svg" alt="8ofDiamonds" />
+  </div>
+  <div class=memory-card data-card="eightDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/8_diamonds.svg" alt="8ofDiamonds" />
+  </div>
+  <div class=memory-card data-card="nineDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/9_diamonds.svg" alt="9ofDiamonds" />
+  </div>
+  <div class=memory-card data-card="nineDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/9_diamonds.svg" alt="9ofDiamonds" />
+  </div>
+  <div class=memory-card data-card="tenDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/10_diamonds.svg" alt="10ofDiamonds" />
+  </div>
+  <div class=memory-card data-card="tenDiamond">
+    <img class="back-face" src="images/red_card_front.svg" alt="RedCheckeredFront" />
+    <img class="front-face" src="images/10_diamonds.svg" alt="10ofDiamonds" />
+  </div> -->
+</section>
+<div id="winner" class="winner-modal">
+  <div class="winner-modal-content">
+    <!-- <span class="close-winner">&times;</span> -->
+    <div class="modal-content">
+      <p>Congratulations, you've won!</p>
+      <button>Go to Level 2</button>
+      <button class="close-winner">Close</button>
+    </div>
+  </div>
+</div>
+  <script src="scripts.js"></script>
+</body>
+</html>
