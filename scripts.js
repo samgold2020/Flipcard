@@ -18,31 +18,11 @@ let darkMode = document.getElementsByClassName("slider-round")[0];
 darkMode.addEventListener('click', activateDark);
 
 
-let dynamicDirections = document.getElementsByClassName("dynamic-directions")[0];
-console.log(dynamicDirections.innerHTML)
-
 function activateDark(){
   let body = document.body;
   body.classList.toggle("dark-mode")
 }
 
-const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links li');
-
-  //Toggle Nav:
-//When we click on the nav burger we want it to get the class of nav-active
-  burger.addEventListener('click', () => {
-//     The classList property returns the class name(s) of an element, as a DOMTokenList object.
-// This property is useful to add, remove and toggle CSS classes on an element.
-    nav.classList.toggle('nav-active');
-  });
-
-}
-  navSlide();
-
-///////////////////////////////////////////////////////////////////////////
 //Functionality for the game 
 const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
