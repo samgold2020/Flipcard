@@ -107,7 +107,6 @@ function shuffle(){
     let randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
     card.classList.remove('flip')
-  
   })
 }
 
