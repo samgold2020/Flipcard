@@ -59,7 +59,7 @@ None
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/samgold2020/Personal-Portfolio
+   git clone https://github.com/samgold2020/Flipcards
    ```
 2. Open locally
    ```sh
